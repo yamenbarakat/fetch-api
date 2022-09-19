@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yamoun</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <h1>What are you interested in?</h1>
+
+      <div class="site-container">
+        <form id="search-form" action="#">
+          <label for="search-keyword" class="visuallyhidden"
+            >What are you interested in?</label
+          >
+          <input
+            id="search-keyword"
+            type="text"
+            name="search-keyword"
+            placeholder="Serch Here"
+            required
+          />
+          <input id="submit-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </header>
+
+    <div class="site-container">
+      <div class="response-container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
