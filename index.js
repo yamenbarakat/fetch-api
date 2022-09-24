@@ -1,4 +1,4 @@
-const displayResponse = document.querySelector(".response-container");
+const displayResponse = document.querySelector("#response-container");
 const form = document.querySelector("#search-form");
 const searchField = document.querySelector("#search-keyword");
 const error = document.querySelector(".error");
@@ -39,6 +39,7 @@ form.addEventListener("submit", function (e) {
     .then((articles) => articles.json())
     .then((articles) => {
       addArticles(articles.response.docs);
+      console.log(1);
     })
     .catch(() => {
       displayResponse.innerHTML = `<div class="error-no-articles">No articles Avalible For ${searchedForText}</div>`;
