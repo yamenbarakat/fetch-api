@@ -39,10 +39,12 @@ form.addEventListener("submit", function (e) {
     .then((articles) => articles.json())
     .then((articles) => {
       addArticles(articles.response.docs);
-      console.log(1);
     })
     .catch(() => {
-      displayResponse.innerHTML = `<div class="error-no-articles">No articles Avalible For ${searchedForText}</div>`;
+      displayResponse.insertAdjacentElement(
+        "beforeend",
+        `<div class="error-no-articles">No articles Avalible For ${searchedForText}</div>`
+      );
     });
 
   function addArticles(articles) {
